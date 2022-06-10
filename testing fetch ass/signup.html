@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/navbar.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <h3>signup apge</h3>
+
+
+    <div>
+        <form id="form">
+            <input id="email" type="text" placeholder="Enter your email"><br><br>
+            <input id="name" type="text" placeholder="Enter your name"><br><br>
+            <input id="pass" type="text" placeholder="Enter your password"><br><br>
+            <button>Submit</button>
+    
+        </form>
+    </div>
+    
+</body>
+</html>
+
+<script type="module">
+
+    import navbar from "./components/navbar.js";
+
+    document.getElementById("navbar").innerHTML=navbar()
+ 
+
+ document.getElementById("form").addEventListener("submit",myfunc);
+
+ function myfunc(){
+
+    event.preventDefault();
+
+    var name=document.getElementById("name").value;
+    var email=document.getElementById("email").value
+    var password=document.getElementById("pass").value
+
+    console.log(name,email,password)
+    window.location.href="login.html"
+
+ }
+
+
+</script>
